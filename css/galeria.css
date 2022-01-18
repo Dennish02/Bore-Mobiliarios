@@ -620,16 +620,19 @@ nav li:nth-child(2) {
   display: block;
 }
 
-img {
+.img-contenedor--img{
   width: 100%;
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  border-radius: 1rem;
+  opacity: 80%;
 }
-img:hover {
+.img-contenedor--img:hover {
   transform: scale(1.05);
+  opacity: 100%;
 }
 
 .img-content-hover {
@@ -659,6 +662,7 @@ img:hover {
 
 .img-content {
   display: none;
+  border-radius: 0.5rem;
 }
 
 .social, .copyright {
@@ -680,14 +684,16 @@ img:hover {
   }
 }
 @media screen and (max-width: 1200px) {
-  img:hover {
+    .img-contenedor--img:hover {
     transform: none;
+    opacity: 80%;
   }
   .img-contenedor {
     height: 100%;
   }
   .img-contenedor:hover .img-content-hover {
     display: none;
+    border-radius: 0.5rem;
   }
 
   .img-content {
