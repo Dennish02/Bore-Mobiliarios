@@ -4,7 +4,7 @@
     --primario: #fdba02fd;
     --secundario: #0097a7;
     --gris:#757575;
-
+    
 }/*pseudoselector*/
 html {
     font-size: 62.5%;
@@ -257,17 +257,12 @@ a{
     }
 }
 
-
+/***  GALERIA ****/
 
 
 
 /** NOSOTROS  **/
 
-
-.info{
-
-
-}
 .info .imagen-info{
     flex-direction: column;
     align-items: center;
