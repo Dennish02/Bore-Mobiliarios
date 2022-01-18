@@ -1,0 +1,324 @@
+:root{
+    --blanco: #FFFFFF;
+    --Oscuro: #333;
+    --primario: #fdba02fd;
+    --secundario: #0097a7;
+    --gris:#757575;
+
+}/*pseudoselector*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /*scroll-snap-type: y mandatory;*/
+   }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body {
+    font-size: 1.6rem;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, #333 0%, var(--blanco) 100% );/*primero direccion despues de color a color*/
+}/*1rem =10px*/
+
+/**selectores mas generales**/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+    color: var(--Oscuro);
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+P{
+    opacity: 0.8;
+}
+h2::after, .trabajos::after{
+    content: url(../img/puntitos-03.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+/**fin selectores generales de titulos**/
+/*.nosotros, .inicio,.galeria, .navegacion-principal {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}*/
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--primario);
+    text-align: center;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;/*display inline inmune al margin y al width, por eso se usa inline block.*/
+    }
+}
+.boton--primario{
+    background-color: var(--gris);
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--Oscuro);
+}
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px -3px rgba(120,120,120,0.58);
+    -moz-box-shadow: 0px 5px 15px -3px rgba(120,120,120,0.58);
+    box-shadow: 0px 5px 15px -3px rgba(120,120,120,0.58);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.titulo span {
+    font-size: 2rem;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 2rem auto;
+}
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px -3px rgba(120,120,120,0.58);
+    -moz-box-shadow: 0px 5px 15px -3px rgba(120,120,120,0.58);
+    box-shadow: 0px 5px 15px -3px rgba(120,120,120,0.58);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*utilidades*/
+.nav-bg{
+    background-color:var(--Oscuro);
+}
+.enviar .button{
+    width: 100%;
+}
+.w-sm-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100{
+        width: auto;
+}
+}
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: flex-end;
+}
+.alinear-izquierda {
+    justify-content: flex-start;
+}
+.bg-fixed{
+    background-image: url(../img/bg-1-02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Fin utilidades   */
+@media (min-width: 768px) {
+    .bg-fixed{
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .header{
+        max-width: 100%;
+        height: 100vh;
+    }
+    .inicio{
+        height: 100vh;
+    }
+    
+}
+.header{
+    margin: 0;
+    padding: 0;
+    display: block;
+    border-radius: 0.5rem;
+}
+.inicio {
+    background-color: rgba(51, 51, 51, 0.438);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.imagen img {
+    width: 100%;
+}
+.ubicacion{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.ubicacion .icon {
+    width: 1rem;
+}
+@media (min-width: 768px) {
+    .ubicacion .icon {
+        width: 4.4rem;
+    }
+    .inicio .ubicacion p {
+        font-size: 1.6rem;
+    }
+}
+.ubicacion p {
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+/* NAVEGACION PRINCIPAL   */
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width:768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;/*distribuir horizantelmente*/
+    }
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--Oscuro);
+}
+/**   ACA VA LA GALERIA  **/
+
+
+@media (min-width: 768px) {
+    .contenedor-trabajos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+}
+/*  TRABAJOS  */
+.trabajos{
+    padding: 0 1rem;
+}
+.trabajos__titulo{
+    color: var(--gris);
+}
+.trabajos__img{
+    display: block;
+    margin: 0 auto;  
+    width: 10rem;
+    color: var(--primario);
+}
+.trabajos__contenedorTexto--texto {
+    text-align: center;
+    
+}
+.trabajos__boton {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+
+@media (min-width: 768px) {
+    .trabajos::after{
+        opacity: 0;
+    }
+    .trabajos__boton{
+        width: 100%;
+    }
+}
+
+
+
+
+
+/** NOSOTROS  **/
+
+
+.info{
+
+
+}
+.info .imagen-info{
+    flex-direction: column;
+    align-items: center;
+}
+.info .imagen-info img {
+    border-radius: 50%;
+    max-width: 10rem;
+}
+@media (min-width: 768px) {
+    .info .imagen-info{
+        padding: 2rem;
+        flex-direction: row;
+        align-items: center;
+     }
+     .info .imagen-info img {
+        max-width: 25rem;
+       /* filter: grayscale(25);*/
+    }
+     .info .info-ema{
+         padding: 2rem;
+         flex-direction: column;
+         align-items: center;
+     } 
+     .info .info-ema p span {
+         font-weight: bold;
+         font-size: 1.8rem;
+         color: var(--primario);
+     }
+}
+
+.contacto {
+    padding: 2rem;
+}
+.contacto span {
+    font-weight: bold;
+}
+
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.redes__red--img{
+    width: 8rem;
+}
+
+/*footer */
+
+.footer{
+    text-align: center;
+    color: var(--blanco);
+    font-size: 1rem;
+}
