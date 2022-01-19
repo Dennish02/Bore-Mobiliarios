@@ -2,6 +2,7 @@
     --blanco: #FFFFFF;
     --Oscuro: #333;
     --primario: #fdba02fd;
+    --over:#b18203fd;
     --secundario: #0097a7;
     --gris:#757575;
     
@@ -45,6 +46,7 @@ h2::after, .trabajos::after{
 }
 a{
     text-decoration: none;
+    color: var(--blanco);
 }
 /**fin selectores generales de titulos**/
 /*.nosotros, .inicio,.galeria, .navegacion-principal {
@@ -55,7 +57,7 @@ a{
 .boton{
     display: block;
     font-family: var(--fuenteHeading);
-    color: var(--primario);
+    
     text-align: center;
     padding: 1rem 2rem;
     font-weight: 700;
@@ -72,13 +74,19 @@ a{
 }
 .boton--primario{
     background-color: var(--gris);
+    color: var(--primario);
+}
+.boton--primario:hover{
+    background-color: var(--Oscuro);
 }
 .boton--secundario{
     background-color: var(--primario);
 }
+.boton--secundario:hover{
+    background-color: var(--over);
+}
 .boton:hover {
     cursor: pointer;
-    background-color: var(--Oscuro);
 }
 .sombra{
     -webkit-box-shadow: 0px 5px 15px -3px rgba(120,120,120,0.58);
@@ -103,7 +111,24 @@ a{
     padding: 2rem;
     border-radius: 1rem;
 }
-
+.logo__inicio{
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+    margin-top: -2%;
+    margin-left: 50%;
+    width: 0%;
+    opacity: 0;
+    }
+  
+    to {
+      margin-top: 0%;
+      width: 100%;
+      opacity: 1;
+    }
+  }
 /*utilidades*/
 .nav-bg{
     background-color:var(--Oscuro);
@@ -286,20 +311,56 @@ a{
          flex-direction: column;
          align-items: center;
      } 
-     .info .info-ema p span {
+     span {
          font-weight: bold;
          font-size: 1.8rem;
-         color: var(--primario);
+         color: var(--Oscuro);
      }
 }
 
 .contacto {
     padding: 2rem;
 }
-.contacto span {
+span {
     font-weight: bold;
 }
+/*CONTACOTO*/
+/*
+.fomrulario{
+    background-color: var(--blanco);
+    margin: 1rem auto 8rem auto;
+    width: 100%;
+    padding: 5rem;
+    border-radius: 1rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo:nth-child(4){
+    justify-content: flex-end;
+    border: none;
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+    color:var(--Oscuro) ;
+}
+.campo__field{
+   flex: 1;
+   border: 1px solid var(--Oscuro);
+   border-radius: 1rem;
+}
+.campo__field--textarea{
+    height: 20rem;
+}*/
+.info{
+    text-align: center;
+    color:var(--Oscuro)
+}
 
+/*fin contacato*/
 
 .redes{
     display: flex;
@@ -309,6 +370,25 @@ a{
 .redes__red--img{
     width: 8rem;
 }
+
+.botones_inferior{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.botones_inferior--boton:nth-child(2){
+    border:  solid 0.2rem var(--blanco);
+    background-color: var(--blanco);
+}
+@media (min-width: 768px){
+
+.botones_inferior{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+}
+
 
 /*footer */
 
