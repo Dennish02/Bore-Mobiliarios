@@ -622,13 +622,13 @@ nav li:nth-child(2) {
  
 }
 .img-contenedor--img{
-  width: 100%;
+  max-width: 575px;
   height: 50rem;
   border-radius: 1rem;
   opacity: 80%;
 }
 .img-contenedor--img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   opacity: 100%;
 }
 @supports (display: grid) {
