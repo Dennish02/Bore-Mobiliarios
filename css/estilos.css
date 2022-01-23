@@ -79,6 +79,7 @@ ul {
 
 .width-95 {
     width: 95%;
+    margin: 0 auto;
 }
 
 
@@ -141,6 +142,12 @@ span {
 .contenedor {
     max-width: 120rem;
     margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    .width-95 {
+        width: 100%;
+    }
 }
 
 .sombra {
@@ -317,9 +324,9 @@ span {
 
 @media (min-width: 768px) {
     .contenedor-trabajos {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 }
 
@@ -462,6 +469,20 @@ span {
 
 .whats {
     color: var(--Oscuro);
+}
+
+.lista__contacto--elemento {
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr 3fr);
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    /*alinear horizonalmente*/
+    align-items: center;
+    /*alinear verticalmente*/
+}
+
+.enlace {
+    grid-column: 2/5;
 }
 
 
