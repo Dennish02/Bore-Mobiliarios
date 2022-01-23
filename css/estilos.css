@@ -133,6 +133,7 @@ ul {
 
 span {
     font-weight: bold;
+    color: var(--Oscuro)!important;
 }
 
 .titulo span {
@@ -471,6 +472,23 @@ span {
 
 .whats {
     color: var(--Oscuro);
+}
+
+.icono {
+    flex-basis: calc(5% - 0.5rem);
+}
+
+.enlace {
+    flex-basis: calc(90% - 0.5rem);
+}
+
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(3% - 1rem);
+    }
+    .enlace {
+        flex-basis: calc(95% - 1rem);
+    }
 }
 
 .lista__contacto--elemento {
