@@ -95,7 +95,6 @@ ul {
     display: block;
     font-family: var(--fuenteHeading);
     text-align: center;
-    padding: 1rem 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -106,6 +105,7 @@ ul {
 @media (min-width: 768px) {
     .boton {
         display: inline-block;
+        padding: 1rem 2rem;
         /*display inline inmune al margin y al width, por eso se usa inline block.*/
     }
 }
@@ -501,7 +501,13 @@ span {
 .botones_inferior {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .botones_inferior {
+        gap: 2rem;
+    }
 }
 
 .botones_inferior--boton:nth-child(2) {
@@ -510,19 +516,15 @@ span {
     background-color: var(--Oscuro);
 }
 
-@media (min-width: 768px) {
-    .botones_inferior {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-}
-
 
 /*footer */
 
 .footer {
     text-align: center;
     color: var(--Oscuro);
-    font-size: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer a {
+    color: var(--over);
 }
