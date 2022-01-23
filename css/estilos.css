@@ -373,22 +373,6 @@ span {
 }
 
 
-/***  G****/
-
-.selectorPagina__contenedor {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    width: 10rem;
-}
-
-.selectorPagina__contenedor--boton {
-    background-color: var(--gris);
-    width: 2rem;
-    text-align: center;
-}
-
-
 /** NOSOTROS  **/
 
 .info {

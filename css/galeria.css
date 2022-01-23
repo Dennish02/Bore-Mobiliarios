@@ -1,52 +1,78 @@
 /* 12columns.css | Created by Katherine Kato | Released under the MIT license */
+
+
 /* GitHub: https://kathykato.github.io/12columns/ */
-:root{
+
+:root {
     --blanco: #FFFFFF;
     --Oscuro: #333;
     --primario: #fdba02fd;
     --secundario: #0097a7;
-    --gris:#757575;
-    
-}
-figure {
-  margin: 0;
-  padding: 0;
-  display: block;
-  text-align: center;
-}
-.gallery{
-  max-width: 120rem;
-  margin-bottom: 3rem;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-}
-@media (min-width:485px){
-  .gallery__grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
-  }
+    --gris: #757575;
 }
 
-@media (min-width: 768px){
-  .gallery__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+figure {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
 }
-.img-contenedor {
-  max-width: 575px;
-  max-height: 500px;
-  cursor: pointer;
-  
+
+.gallery {
+    max-width: 120rem;
+    margin-bottom: 3rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
 }
-.img-contenedor--img:hover {
-  transform: scale(1.02);
-  opacity: 100%;
+
+@media (min-width:485px) {
+    .gallery__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 }
+
+@media (min-width: 768px) {
+    .gallery__grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 3rem 2rem;
+    }
+    .img-contenedor {
+        max-width: 575px;
+        max-height: 500px;
+        cursor: pointer;
+    }
+    .img-contenedor--img:hover {
+        transform: scale(1.02);
+        opacity: 100%;
+    }
 }
-.img-contenedor--img{
+
+.img-contenedor--img {
     margin: 0 auto;
     width: 100%;
     border-radius: 1rem;
+}
+
+@media (min-width: 798px) {
+    .colum-1 {
+        grid-column: 1/3;
+    }
+    .colum-2 {
+        grid-column: 3/5;
+    }
+    .colum-3 {
+        grid-column: 5/7;
+    }
+    .colum-4 {
+        grid-column: 1/4;
+    }
+    .colum-5 {
+        grid-column: 4/7;
+    }
+    .colum-6 {
+        grid-column: 5/7;
+    }
 }
