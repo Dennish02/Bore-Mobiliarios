@@ -324,9 +324,11 @@ span {
 
 @media (min-width: 768px) {
     .contenedor-trabajos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .trabajos {
+        flex-basis: calc(33.3% - 1rem);
     }
 }
 
@@ -472,17 +474,19 @@ span {
 }
 
 .lista__contacto--elemento {
-    display: grid;
-    grid-template-columns: repeat(4, 0.5fr 3fr);
-    gap: 0.5rem;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-around;
     /*alinear horizonalmente*/
     align-items: center;
     /*alinear verticalmente*/
 }
 
+.icono {
+    flex-basis: calc(3% - 1rem)
+}
+
 .enlace {
-    grid-column: 2/5;
+    flex-basis: calc(95% - 1rem);
 }
 
 
@@ -512,7 +516,6 @@ span {
 
 .botones_inferior--boton:nth-child(2) {
     color: var(--blanco);
-    border: solid 0.2rem var(--blanco);
     background-color: var(--Oscuro);
 }
 
